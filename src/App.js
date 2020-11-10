@@ -3,11 +3,18 @@ import Content from "./containers/Content";
 import Footer from "./containers/Footer";
 
 function App() {
+	console.log(process.env);
 	return (
 		<div className='App'>
-			<Header />
-			<Content />
-			<Footer />
+			<div>
+				<Header />
+			</div>
+			<div>
+				<Content />
+			</div>
+			<div>
+				<Footer />
+			</div>
 		</div>
 	);
 }

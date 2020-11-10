@@ -4,12 +4,12 @@ import Item from "./Item";
 
 const ItemList = props => {
 	return (
-		<div>
-			<h3>Item List</h3>
-			<ul>
+		<div className=''>
+			<h3 className='text-2xl font-bold border-b mb-2'>Item List</h3>
+			<ul className='flex'>
 				{props.items.map(item => {
 					return (
-						<li key={item.id}>
+						<li className='p-3 m-2 rounded-sm shadow-md w-1/2' key={item.id}>
 							<Item item={item} />
 						</li>
 					);

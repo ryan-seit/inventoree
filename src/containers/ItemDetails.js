@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 const ItemDetails = props => {
 	return (
-		<div>
-			<h3>Item Details</h3>
+		<div className=''>
+			<h3 className='text-2xl font-bold border-b mb-2'>Item Details</h3>
 		</div>
 	);
 };

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 // import PropTypes from "prop-types";
-import ItemNew from "./ItemNew";
+// import Item from "./Item";
+// import ItemNew from "./ItemNew";
 import ItemList from "./ItemList";
+import ItemDetails from "./ItemDetails";
 
 const Content = () => {
 	const randomNum = Math.floor(Math.random() * 10 + 1);
@@ -19,7 +21,7 @@ const Content = () => {
 			itemPrice: "$1.99",
 			itemVendor: "Amazon",
 			itemPurchaseDate: "10/01/2020",
-			itemPhoto: "",
+			itemPhotoURL: "",
 		},
 		{
 			id: randomNum + 1,
@@ -33,7 +35,7 @@ const Content = () => {
 			itemPrice: "$200.99",
 			itemVendor: "Besjt Buy",
 			itemPurchaseDate: "11/01/2020",
-			itemPhoto: "",
+			itemPhotoURL: "",
 		},
 	]);
 
@@ -44,10 +46,16 @@ const Content = () => {
 	};
 
 	return (
-		<div>
-			<h3>Content</h3>
-			<ItemNew handleSubmit={handleSubmit} />
-			<ItemList items={items} />
+		<div className='text-gray-600 container mx-auto w-auto h-screen'>
+			<main className='p-10 grid grid-cols-2 gap-20 w-screen'>
+				{/* <ItemNew handleSubmit={handleSubmit} /> */}
+				<div className=''>
+					<ItemList items={items} />
+				</div>
+				<div className=''>
+					<ItemDetails item={items.filter(item => item.name === "Item 1")} />
+				</div>
+			</main>
 		</div>
 	);
 };
