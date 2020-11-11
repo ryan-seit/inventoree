@@ -5,14 +5,14 @@ import Footer from "./containers/Footer";
 function App() {
 	console.log(process.env);
 	return (
-		<div className='App'>
-			<div>
+		<div className='App overflow-x-hidden'>
+			<div className=''>
 				<Header />
 			</div>
-			<div>
+			<div className=''>
 				<Content />
 			</div>
-			<div>
+			<div className=''>
 				<Footer />
 			</div>
 		</div>
